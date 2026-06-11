@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>what do you want ?</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page vote-page">
+      <section class="panel">
+        <p class="eyebrow">匿名多选投票</p>
+        <h1>what do you want&nbsp;&nbsp;?</h1>
+
+        <form id="voteForm" class="vote-form">
+          <label class="choice-card">
+            <input type="checkbox" name="choice" value="A" />
+            <span class="choice-key">A</span>
+            <span class="choice-text">我更想要一些邪修小tips</span>
+          </label>
+
+          <label class="choice-card">
+            <input type="checkbox" name="choice" value="B" />
+            <span class="choice-key">B</span>
+            <span class="choice-text">我更想要资源共享（多多益善）</span>
+          </label>
+
+          <button type="submit">提交选择</button>
+          <p id="message" class="message" role="status"></p>
+        </form>
+
+        <div id="imageModal" class="image-modal" hidden>
+          <div class="image-modal-backdrop" data-close-modal></div>
+          <div class="image-modal-content" role="dialog" aria-modal="true" aria-label="投票后的图片">
+            <button class="modal-close" type="button" data-close-modal aria-label="关闭图片">×</button>
+          <!--
+            后续加图位置：
+            把图片放到 public/images/ 文件夹里，并命名为 result.png。
+            如果你想换名字，就把下面 src="/images/result.png" 改成你的图片路径。
+          -->
+            <img src="/images/result.png" alt="投票后的图片" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/vote.js"></script>
+  </body>
+</html>
