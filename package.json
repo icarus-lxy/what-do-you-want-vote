@@ -1,0 +1,13 @@
+{
+  "name": "what-do-you-want-vote",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A small anonymous voting page with live admin stats.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
